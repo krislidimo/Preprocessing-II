@@ -249,3 +249,14 @@ nav a:last-child {
   width: 30%;
   margin-bottom: 30px;
 }
+.home .content-pick .destination .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 200px;
+  background-color: #008080;
+  color: white;
+  font-size: 18px;
+  border-radius: 15px;
+}
