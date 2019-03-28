@@ -1,12 +1,30 @@
-.home {
 
-  header {
-    display:flex;
-    justify-content: space-between;
+header {
+  max-width: 800px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+
+  @media @mobile {
+    flex-direction: column;
+    justify-content: none;
     align-items: center;
-    padding: 24px 0;
-    border-bottom: 2px dashed lightgrey;
+    padding-top: 17px;
+    padding-bottom: 10px;
+
+    h1 {
+      font-size: 30px;
+      padding-bottom: 16px;
+    }
   }
+}
+
+.dashes {
+  border-bottom: 2px dashed lightgrey;
+}
+
+.home {
 
   .intro {
     padding-top: 20px;
@@ -20,8 +38,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -35,9 +51,26 @@
         border-radius: 10px;
       }
     }
+
+    @media @mobile {
+      flex-direction: column;
+      flex-wrap: none;
+      justify-content: none;
+
+      .text-content {
+        width: 100%;
+        padding-right: 0;
+      }
+
+      .img-content {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
   }
 
   .inverse-content {
+    display: flex;
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
@@ -50,6 +83,20 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media @mobile {
+      flex-direction: column-reverse;
+
+      .text-content {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .img-content {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
   }
 
   .content-destination {
@@ -58,6 +105,10 @@
 
     img {
       border-radius: 10px;
+    }
+
+    @media @mobile {
+      width: 100%;
     }
   }
 
@@ -72,8 +123,25 @@
       margin-bottom: 30px;
 
       .btn {
-        .new-btn(45px,200px,#008080,white,18px);
+        .new-btn(45px,#008080,white,18px);
       }
     }
+
+    @media @mobile {
+      flex-direction: column;
+
+      .destination {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        .new-btn(45px,#008080,white,18px);
+      }
+    }
+  }
+
+  @media @mobile {
+    padding: 0 3%;
   }
 }// home
